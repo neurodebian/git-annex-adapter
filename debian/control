@@ -1,0 +1,23 @@
+Source: git-annex-adapter
+Maintainer: NeuroDebian Team <team@neuro.debian.net>
+Uploaders: Michael Hanke <mih@debian.org>,
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python3-all,
+               python3-setuptools,
+Standards-Version: 3.9.8
+Homepage: https://github.com/alpernebbi/git-annex-adapter
+X-Python3-Version: >= 3.2
+
+Package: python3-git-annex-adapter
+Architecture: all
+Section: python
+Depends: git-annex (>=6.20160726~) | git-annex-standalone (>=6.20160726~),
+         ${misc:Depends},
+         ${python3:Depends},
+Provides: ${python3:Provides}
+Description: call git-annex commands from within Python
+ This is a minimalistic interface to git-annex. Commands are executed using
+ subprocess and use their batch versions whenever possible.
